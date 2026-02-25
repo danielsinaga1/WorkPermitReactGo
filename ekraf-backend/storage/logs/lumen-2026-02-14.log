@@ -1,0 +1,8 @@
+[2026-02-14 07:34:34] local.ERROR: Command "tinker" is not defined. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"tinker\" is not defined. at C:/Freelance/EKRAF/ekraf-backend/vendor/symfony/console/Application.php:745)
+[stacktrace]
+#0 C:/Freelance/EKRAF/ekraf-backend/vendor/symfony/console/Application.php(266): Symfony/Component/Console/Application->find('tinker')
+#1 C:/Freelance/EKRAF/ekraf-backend/vendor/symfony/console/Application.php(175): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#2 C:/Freelance/EKRAF/ekraf-backend/vendor/laravel/lumen-framework/src/Console/Kernel.php(160): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#3 C:/Freelance/EKRAF/ekraf-backend/artisan(25): Laravel/Lumen/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#4 {main}
+"} 

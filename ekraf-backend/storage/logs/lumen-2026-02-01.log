@@ -1,0 +1,7 @@
+[2026-02-01 08:50:46] local.ERROR: Call to undefined function public_path() {"exception":"[object] (Error(code: 0): Call to undefined function public_path() at C:/Freelance/EKRAF/ekraf-backend/config/filesystems.php:21)
+[stacktrace]
+#0 C:/Freelance/EKRAF/ekraf-backend/vendor/laravel/lumen-framework/src/Application.php(715): require()
+#1 C:/Freelance/EKRAF/ekraf-backend/bootstrap/app.php(51): Laravel/Lumen/Application->configure('filesystems')
+#2 C:/Freelance/EKRAF/ekraf-backend/artisan(13): require('C://Freelance//EK...')
+#3 {main}
+"} 

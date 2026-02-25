@@ -1,0 +1,348 @@
+/* ================================================================
+   berita-publikasi.css – Professional styles for Berita, Publikasi
+   & Produk Hukum pages (extends profil-ppid.css)
+   ================================================================ */
+
+/* ---- Search bar ---- */
+.bp-search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.bp-search-wrapper .p-inputtext {
+  border-radius: 25px;
+  padding-left: 42px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  border: 1px solid rgba(0,0,0,.08);
+  transition: all 0.3s ease;
+}
+.bp-search-wrapper .p-inputtext:focus {
+  box-shadow: 0 4px 20px rgba(99,102,241,.15);
+  border-color: #6366f1;
+}
+
+/* ---- Article card ---- */
+.bp-article-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.06);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.bp-article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(99,102,241,.12);
+}
+.bp-article-card .article-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+.bp-article-card .article-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.bp-article-card:hover .article-img-wrapper img {
+  transform: scale(1.08);
+}
+.bp-article-card .article-img-wrapper .article-date-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(30, 27, 75, 0.85);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.bp-article-card .article-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
+}
+.bp-article-card .article-body h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e1b4b;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+.bp-article-card .article-body .article-excerpt {
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+.bp-article-card .article-body .article-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0,0,0,.04);
+}
+
+/* ---- Promo card (poster style) ---- */
+.bp-promo-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.06);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.bp-promo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(99,102,241,.12);
+}
+.bp-promo-card .promo-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+}
+.bp-promo-card .promo-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.bp-promo-card:hover .promo-img-wrapper img {
+  transform: scale(1.05);
+}
+.bp-promo-card .promo-img-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(0deg, rgba(0,0,0,.5) 0%, transparent 100%);
+  pointer-events: none;
+}
+.bp-promo-card .promo-img-wrapper .promo-overlay-title {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  color: #fff;
+  z-index: 1;
+}
+.bp-promo-card .promo-body {
+  padding: 16px 20px 20px;
+}
+
+/* ---- Ragam horizontal card ---- */
+.bp-ragam-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.06);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .bp-ragam-card { flex-direction: row; }
+}
+.bp-ragam-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(99,102,241,.1);
+}
+.bp-ragam-card .ragam-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+@media (min-width: 768px) {
+  .bp-ragam-card .ragam-img {
+    width: 220px;
+    height: auto;
+    min-height: 180px;
+  }
+}
+.bp-ragam-card:hover .ragam-img {
+  transform: scale(1.05);
+}
+.bp-ragam-card .ragam-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+
+/* ---- Detail article ---- */
+.bp-detail-article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+.bp-detail-content {
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,.06);
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.04);
+}
+.bp-detail-content .detail-hero-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+@media (max-width: 640px) {
+  .bp-detail-content .detail-hero-img { height: 220px; }
+  .bp-detail-content { padding: 20px; }
+  .bp-detail-article { padding: 20px 16px; }
+}
+.bp-detail-content .detail-text {
+  line-height: 1.9;
+  color: #374151;
+  text-align: justify;
+  font-size: 0.95rem;
+}
+.bp-detail-content .detail-inline-img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
+}
+
+/* ---- Data table wrapper (Produk Hukum) ---- */
+.bp-law-table-wrapper {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.06);
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.04);
+}
+.bp-law-table-wrapper .p-datatable .p-datatable-thead > tr > th {
+  background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  padding: 14px 16px;
+}
+.bp-law-table-wrapper .p-datatable .p-datatable-tbody > tr {
+  transition: background 0.2s ease;
+}
+.bp-law-table-wrapper .p-datatable .p-datatable-tbody > tr:hover {
+  background: #f5f3ff !important;
+}
+.bp-law-table-wrapper .p-datatable .p-datatable-tbody > tr > td {
+  padding: 14px 16px;
+  font-size: 0.88rem;
+  border-bottom: 1px solid rgba(0,0,0,.04);
+}
+
+/* ---- Paginator custom ---- */
+.bp-paginator .p-paginator {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.bp-paginator .p-paginator .p-paginator-page.p-highlight {
+  background: linear-gradient(135deg, #4338ca, #6366f1);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(99,102,241,.3);
+}
+.bp-paginator .p-paginator .p-paginator-page,
+.bp-paginator .p-paginator .p-paginator-first,
+.bp-paginator .p-paginator .p-paginator-prev,
+.bp-paginator .p-paginator .p-paginator-next,
+.bp-paginator .p-paginator .p-paginator-last {
+  border-radius: 10px;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  transition: all 0.2s ease;
+}
+
+/* ---- Social icons ---- */
+.bp-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.bp-social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+/* ---- Empty state ---- */
+.bp-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 64px 20px;
+  gap: 16px;
+  animation: fadeInUp 0.6s ease;
+}
+.bp-empty-state .empty-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- Grid articles ---- */
+.bp-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+.bp-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .bp-grid-2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---- Content section wrapper ---- */
+.bp-content-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+@media (max-width: 640px) {
+  .bp-content-section { padding: 20px 16px; }
+  .bp-grid-3 { grid-template-columns: 1fr; }
+}
